@@ -1,0 +1,199 @@
+/* ==========================================================================
+   SECTION 04: READERS (ĐỘC GIẢ & FEEDBACK) CSS
+   ========================================================================== */
+
+.readers-section {
+  position: relative;
+  background-color: var(--bg-sand-light);
+  color: var(--text-dark-body);
+  padding: 100px 0 110px;
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 160, 80, 0.25);
+  border-bottom: 1px solid rgba(28, 24, 21, 0.1);
+}
+
+.readers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* --- Cột bên (Trái & Phải): Danh sách Feedback Card --- */
+.reader-reviews-col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.reader-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  transition: transform 0.3s ease;
+}
+
+.reader-card:hover {
+  transform: translateY(-3px);
+}
+
+.reader-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reader-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--gold-primary);
+  background-color: #2b241c;
+  flex-shrink: 0;
+}
+
+.reader-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reader-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reader-name {
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark-heading);
+}
+
+.reader-stars {
+  color: #c9a050;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+}
+
+.reader-quote {
+  font-family: var(--font-serif-literary);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-dark-body);
+}
+
+/* --- Cột giữa: Trích dẫn vàng, Điểm 4.8 & Thanh Progress Bars --- */
+.readers-center-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 24px;
+  background: var(--bg-sand-card);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  border: 1px solid rgba(201, 160, 80, 0.3);
+  box-shadow: 0 10px 30px rgba(40, 30, 20, 0.05);
+}
+
+.readers-highlight-quote {
+  font-family: var(--font-serif-literary);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.3vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark-heading);
+  margin-bottom: 24px;
+  max-width: 380px;
+}
+
+.readers-score-wrapper {
+  margin-bottom: 12px;
+}
+
+.readers-score-number {
+  font-family: var(--font-serif-literary);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--text-dark-heading);
+  line-height: 1;
+}
+
+.readers-score-number span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-dark-muted);
+}
+
+.readers-score-stars {
+  color: #c9a050;
+  font-size: 1.15rem;
+  letter-spacing: 4px;
+  margin-top: 6px;
+}
+
+/* Thanh phân bổ tỉ lệ đánh giá sao (Rating Breakdown) */
+.rating-breakdown-table {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-dark-muted);
+}
+
+.rating-star-label {
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.rating-bar-track {
+  flex: 1;
+  height: 4px;
+  background-color: rgba(40, 30, 20, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.rating-bar-fill {
+  height: 100%;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rating-percent-label {
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--text-dark-heading);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .readers-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .readers-center-summary {
+    order: -1;
+  }
+}

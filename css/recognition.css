@@ -1,0 +1,141 @@
+/* ==========================================================================
+   SECTION 02: RECOGNITION (REVIEW TỪ BÁO CHÍ DANH TIẾNG) CSS
+   ========================================================================== */
+
+.recognition-section {
+  position: relative;
+  background-color: var(--bg-sand-surface);
+  color: var(--text-dark-body);
+  padding: 80px 0 90px;
+  border-bottom: 1px solid rgba(28, 24, 21, 0.1);
+}
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.recognition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.recognition-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(40, 30, 20, 0.14);
+}
+
+.recognition-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Kiểu chữ / Logo của các hãng thông tấn */
+.press-logo {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  user-select: none;
+}
+
+/* The New York Times font cổ điển */
+.press-logo-nyt {
+  font-family: 'UnifrakturMaguntia', 'Chomsky', 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1512;
+}
+
+/* BBC - 3 khối vuông */
+.press-logo-bbc {
+  display: flex;
+  gap: 3px;
+}
+
+.press-logo-bbc span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: #1a1512;
+  color: #ffffff;
+  font-family: var(--font-sans-body);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* The Guardian */
+.press-logo-guardian {
+  font-family: 'Egyptian Slate', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #1a1512;
+}
+
+/* TIME */
+.press-logo-time {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #1a1512;
+}
+
+/* The Washington Post */
+.press-logo-wapo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1a1512;
+}
+
+/* Lời nhận xét trích dẫn */
+.press-quote {
+  font-family: var(--font-serif-literary);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--text-dark-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .recognition-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .recognition-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .recognition-card {
+    border-bottom: 1px dashed rgba(40, 30, 20, 0.12);
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .recognition-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

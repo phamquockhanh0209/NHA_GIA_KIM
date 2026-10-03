@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mua Sách & Liên Hệ - Nhà Giả Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS CHUNG & CSS RIÊNG CỦA MUA SÁCH / FOOTER -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body style="background-color: #0c0a08;">
+
+  <!-- Thanh điều hướng mini -->
+  <div style="background: #14110e; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(201, 160, 80, 0.2);">
+    <a href="index.html" style="color: #e4c57c; font-family: var(--font-heading-royal); font-weight: 700;">&larr; VỀ TRANG CHỦ</a>
+    <span style="color: #8e8372; font-size: 0.85rem;">FILE RIÊNG: purchase.html (CSS: css/footer.css)</span>
+  </div>
+
+  <!-- NỘI DUNG FOOTER & MUA SÁCH -->
+  <footer class="site-footer" id="purchase" style="min-height: 85vh; display: flex; align-items: center;">
+    <div class="container" style="width: 100%;">
+      <div class="footer-top-grid">
+        <!-- Cột trái: Slogan -->
+        <div class="footer-left-col reveal-fade-left">
+          <h2 class="footer-slogan">
+            ĐỌC MỘT CUỐN SÁCH,<br>
+            THAY ĐỔI MỘT HÀNH TRÌNH.
+          </h2>
+          <div class="footer-copyright">
+            &copy; 2024 Nhà Giả Kim. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Cột giữa: Link & Newsletter -->
+        <div class="footer-center-col reveal-fade-up delay-1">
+          <nav class="footer-nav">
+            <a href="index.html" class="footer-nav-link">Trang chủ</a>
+            <a href="author.html" class="footer-nav-link">Tác giả</a>
+            <a href="review.html" class="footer-nav-link">Review</a>
+            <a href="feedback.html" class="footer-nav-link">Feedback</a>
+          </nav>
+
+          <form class="footer-newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin!');">
+            <span class="newsletter-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <input 
+              type="email" 
+              class="newsletter-input" 
+              placeholder="Nhập email của bạn..." 
+              required
+              aria-label="Email nhận bản tin"
+            />
+            <button type="submit" class="newsletter-submit-btn" aria-label="Gửi email">&rarr;</button>
+          </form>
+
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 2.89 3.48 2.82 1.5-.01 2.81-1.06 3.15-2.52.09-.43.12-.88.12-1.33V.02h-.03z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột phải: Thumbnail & Nút mua sách -->
+        <div class="footer-right-col reveal-fade-right delay-2">
+          <div class="footer-art-thumbnail image-placeholder" title="Bầu trời sa mạc đêm">
+            <img 
+              src="images/footer-desert.jpg" 
+              alt="Lữ hành sa mạc đêm" 
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 220 110\' fill=\'%2314110e\'><rect width=\'220\' height=\'110\'/><circle cx=\'180\' cy=\'30\' r=\'12\' fill=\'%23e4c57c\' opacity=\'0.7\'/><path d=\'M0 90 Q 60 70 120 85 T 220 75 L 220 110 L 0 110 Z\' fill=\'%23251e18\'/><circle cx=\'110\' cy=\'82\' r=\'4\' fill=\'%23e4c57c\'/></svg>'"
+            />
+            <div class="placeholder-tip">💡 images/footer-desert.jpg</div>
+          </div>
+
+          <div class="footer-quote">
+            &ldquo;Không có gì là ngẫu nhiên, tất cả đều có lý do.&rdquo;
+            <span class="footer-quote-author">&mdash; Paulo Coelho</span>
+          </div>
+
+          <button class="btn-gold footer-buy-btn buy-book-trigger">
+            MUA NHÀ GIẢ KIM &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ĐẶT MUA SÁCH NHANH -->
+    <div class="order-modal-backdrop" id="orderModal">
+      <div class="order-modal-card">
+        <button class="order-modal-close" id="closeOrderModal" aria-label="Đóng popup">&times;</button>
+        
+        <div class="modal-header">
+          <h3 class="modal-header-title">ĐẶT MUA NHÀ GIẢ KIM</h3>
+          <p class="modal-header-desc">Bản đặc biệt bìa cứng cao cấp &bull; Tặng kèm Bookmark mạ vàng</p>
+        </div>
+
+        <form class="order-form" id="bookOrderForm" onsubmit="event.preventDefault(); window.handleOrderSubmit();">
+          <div class="form-group">
+            <label for="customerName">Họ và tên của bạn</label>
+            <input type="text" id="customerName" required placeholder="Ví dụ: Nguyễn Văn A">
+          </div>
+
+          <div class="form-group">
+            <label for="customerPhone">Số điện thoại nhận hàng</label>
+            <input type="tel" id="customerPhone" required placeholder="098x xxx xxx">
+          </div>
+
+          <div class="form-group">
+            <label for="customerAddress">Địa chỉ giao hàng</label>
+            <input type="text" id="customerAddress" required placeholder="Số nhà, đường, phường/xã, quận/huyện...">
+          </div>
+
+          <div class="form-group">
+            <label for="bookQuantity">Số lượng cuốn</label>
+            <select id="bookQuantity" onchange="window.updateOrderPrice(this.value)">
+              <option value="1">1 cuốn - 129.000 đ (Bản kỉ niệm cao cấp)</option>
+              <option value="2">2 cuốn - 258.000 đ (Freeship toàn quốc)</option>
+              <option value="3">3 cuốn - 387.000 đ (Tặng kèm sổ tay lữ hành)</option>
+            </select>
+          </div>
+
+          <div class="price-summary">
+            <span>Tổng thanh toán:</span>
+            <span class="price-total" id="orderTotalPrice">129.000 đ</span>
+          </div>
+
+          <button type="submit" class="btn-gold submit-order-btn">
+            XÁC NHẬN ĐẶT HÀNG &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

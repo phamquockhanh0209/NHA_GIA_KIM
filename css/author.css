@@ -1,0 +1,246 @@
+/* ==========================================================================
+   SECTION 01: THE AUTHOR CSS
+   ========================================================================== */
+
+.author-section {
+  position: relative;
+  background-color: var(--bg-sand-light);
+  color: var(--text-dark-body);
+  padding: 110px 0 100px;
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 160, 80, 0.25);
+  border-bottom: 1px solid rgba(28, 24, 21, 0.08);
+}
+
+/* Lưới bố cục 3 cột của Tác giả */
+.author-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr 280px;
+  gap: 48px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Cột trái: Ảnh chân dung & Chữ ký --- */
+.author-portrait-wrapper {
+  position: relative;
+}
+
+.author-portrait-frame {
+  width: 100%;
+  height: 440px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(40, 30, 20, 0.18);
+  position: relative;
+  background: #231e1a;
+  border: 1px solid rgba(201, 160, 80, 0.3);
+}
+
+.author-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.1);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.author-portrait-wrapper:hover .author-portrait-frame img {
+  transform: scale(1.04);
+  filter: grayscale(10%) contrast(1.05);
+}
+
+/* Fallback chân dung tác giả khi chưa có ảnh */
+.author-portrait-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #2b2520, #171310);
+  color: #c9a050;
+  padding: 24px;
+  text-align: center;
+}
+
+.author-portrait-fallback svg {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+/* Chữ ký nghệ thuật màu vàng đè lên góc dưới */
+.author-signature {
+  position: absolute;
+  bottom: -20px;
+  right: -24px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.author-signature-svg {
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.author-signature-text {
+  font-family: 'Cormorant Garamond', cursive;
+  font-style: italic;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #322100;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  transform: rotate(-8deg);
+  letter-spacing: 0.05em;
+}
+
+/* --- Cột giữa: Giới thiệu Paulo Coelho --- */
+.author-bio {
+  padding-top: 10px;
+}
+
+.author-name {
+  font-family: var(--font-heading-royal);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-dark-heading);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.author-sub {
+  font-family: var(--font-serif-literary);
+  font-style: italic;
+  font-size: 1.45rem;
+  color: var(--gold-dark);
+  margin-bottom: 28px;
+  display: block;
+}
+
+.author-desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-dark-body);
+  text-align: justify;
+}
+
+/* --- Cột phải: Thông số tác phẩm (Specs Table) --- */
+.author-specs-card {
+  background: var(--bg-sand-card);
+  backdrop-filter: blur(8px);
+  padding: 24px 20px;
+  border-left: 1px solid rgba(201, 160, 80, 0.4);
+  margin-top: 10px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(40, 30, 20, 0.12);
+  font-size: 0.88rem;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  color: var(--text-dark-muted);
+  font-weight: 400;
+}
+
+.spec-value {
+  color: var(--text-dark-heading);
+  font-weight: 600;
+  text-align: right;
+}
+
+.spec-value small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.76rem;
+  color: var(--text-dark-muted);
+}
+
+/* Nét vẽ minh họa núi sa mạc nghệ thuật phía dưới */
+.author-landscape-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .author-grid {
+    grid-template-columns: 320px 1fr;
+    gap: 36px;
+  }
+
+  .author-specs-card {
+    grid-column: span 2;
+    border-left: none;
+    border-top: 1px solid rgba(201, 160, 80, 0.4);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .spec-value {
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .author-section {
+    padding: 80px 0 60px;
+  }
+
+  .author-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .author-portrait-frame {
+    height: 360px;
+  }
+
+  .author-signature {
+    right: 10px;
+    bottom: -15px;
+  }
+
+  .author-specs-card {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .spec-row {
+    flex-direction: row;
+    border-bottom: 1px dashed rgba(40, 30, 20, 0.12);
+    padding: 8px 0;
+  }
+
+  .spec-value {
+    text-align: right;
+    margin-top: 0;
+  }
+}

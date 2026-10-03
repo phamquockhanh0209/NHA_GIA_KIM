@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section - Nhà Giả Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS CHUNG & CSS RIÊNG CỦA HERO -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+</head>
+<body style="background-color: #0b0908;">
+
+  <!-- Header đi kèm để xem tổng thể phần đầu trang -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrapper">
+          <svg class="brand-icon-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="14" r="5" fill="#C9A050" opacity="0.85" />
+            <path d="M4 32L16 16L24 26L36 10L40 32H4Z" stroke="#E4C57C" stroke-width="1.8" stroke-linejoin="round" />
+            <path d="M16 16L24 28" stroke="#E4C57C" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <span class="brand-text">Nhà Giả Kim</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Về Trang Chủ</a>
+      </nav>
+      <div class="header-actions">
+        <a href="purchase.html" class="btn-gold header-btn">MUA SÁCH</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NỘI DUNG HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <canvas id="alchemyDustCanvas"></canvas>
+    <div class="hero-sun-glow"></div>
+
+    <div class="container hero-container">
+      <!-- Cột trái: Tiêu đề & Nút bấm -->
+      <div class="hero-left reveal-fade-left">
+        <div class="hero-author-vertical">
+          <span>PAULO COELHO &bull; 1988</span>
+        </div>
+
+        <div class="hero-left-content">
+          <h1 class="hero-main-title">
+            <span>NHÀ</span>
+            <span>GIẢ</span>
+            <span>KIM</span>
+          </h1>
+
+          <p class="hero-quote">
+            Một hành trình đi tìm kho báu, nhưng cuối cùng lại là tìm thấy chính mình.
+          </p>
+
+          <div class="hero-actions">
+            <a href="journey.html" class="btn-outline-glass">
+              KHÁM PHÁ CUỐN SÁCH &rarr;
+            </a>
+            <a href="purchase.html" class="btn-gold buy-book-trigger">
+              MUA SÁCH
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột phải: 3 dòng thông số -->
+      <div class="hero-right reveal-fade-right delay-2">
+        <div class="hero-stat-item">
+          <div class="hero-stat-title">THE ALCHEMIST</div>
+          <div class="hero-stat-desc">KIỆT TÁC VĂN HỌC</div>
+        </div>
+
+        <div class="hero-stat-item">
+          <div class="hero-stat-title">65+ MILLION COPIES</div>
+          <div class="hero-stat-desc">BẢN ĐƯỢC BÁN RA</div>
+        </div>
+
+        <div class="hero-stat-item">
+          <div class="hero-stat-title">TRANSLATED WORLDWIDE</div>
+          <div class="hero-stat-desc">HƠN 80 NGÔN NGỮ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

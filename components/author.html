@@ -1,0 +1,94 @@
+<!-- ==========================================================================
+     COMPONENT: SECTION 01 - THE AUTHOR
+     Tệp: components/author.html
+     ========================================================================== -->
+<section class="author-section" id="author">
+  <div class="container">
+    <!-- Header Section đánh số: 01 — THE AUTHOR -->
+    <div class="section-tag theme-light reveal-fade-up">
+      <span class="number">01</span>
+      <span class="line"></span>
+      <span>THE AUTHOR</span>
+    </div>
+
+    <div class="author-grid">
+      <!-- CỘT TRÁI: Ảnh chân dung tác giả + Chữ ký vàng -->
+      <div class="author-portrait-wrapper reveal-fade-left">
+        <div class="author-portrait-frame image-placeholder">
+          <!-- Ảnh tác giả: người dùng có thể đặt file vào images/author.jpg -->
+          <img 
+            src="images/author.jpg" 
+            alt="Chân dung nhà văn Paulo Coelho" 
+            id="authorImage"
+            onerror="this.style.display='none'; document.getElementById('authorFallback').style.display='flex';"
+          />
+          <!-- Giao diện dự phòng nếu chưa có ảnh -->
+          <div class="author-portrait-fallback" id="authorFallback" style="display: none;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <div style="font-family: var(--font-heading-royal); font-size: 0.95rem; margin-bottom: 6px;">
+              PAULO COELHO
+            </div>
+            <div style="font-size: 0.75rem; color: #bca88d;">
+              Đặt ảnh tác giả vào<br><code>images/author.jpg</code>
+            </div>
+          </div>
+          <div class="placeholder-tip">💡 Gợi ý: Đặt ảnh chân dung tác giả vào images/author.jpg</div>
+        </div>
+
+        <!-- Chữ ký màu vàng ánh kim nghệ thuật Paulo Coelho -->
+        <div class="author-signature">
+          <div class="author-signature-text">Paulo Coelho</div>
+        </div>
+      </div>
+
+      <!-- CỘT GIỮA: Tên, Phụ đề, Đoạn văn tiểu sử -->
+      <div class="author-bio reveal-fade-up delay-1">
+        <h2 class="author-name">PAULO COELHO</h2>
+        <span class="author-sub">Nhà văn Brazil</span>
+        <div class="author-desc">
+          <p>
+            Paulo Coelho sinh năm 1947 tại Rio de Janeiro, Brazil. Ông là một trong những nhà văn có tầm ảnh hưởng lớn nhất thế giới, với những tác phẩm truyền cảm hứng về hành trình, ước mơ và sự tìm kiếm ý nghĩa của cuộc sống. <em>Nhà Giả Kim</em> là tác phẩm nổi tiếng nhất của ông, được dịch ra hơn 80 ngôn ngữ và bán hơn 65 triệu bản trên toàn thế giới.
+          </p>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: Bảng thông tin xuất bản (Metadata) -->
+      <div class="author-specs-card reveal-fade-right delay-2">
+        <div class="spec-row">
+          <span class="spec-label">Tác giả</span>
+          <span class="spec-value">Paulo Coelho</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Năm xuất bản</span>
+          <span class="spec-value">1988</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Thể loại</span>
+          <span class="spec-value">Tiểu thuyết</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Số trang</span>
+          <span class="spec-value">163</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Ngôn ngữ</span>
+          <span class="spec-value">
+            Tiếng Anh
+            <small>(và nhiều ngôn ngữ khác)</small>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nét vẽ phác thảo dãy núi sa mạc nghệ thuật mộc mạc phía dưới -->
+  <div class="author-landscape-bg">
+    <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 190L120 110L200 150L310 70L420 160L520 80L600 190" stroke="#8E7863" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <path d="M50 190L160 130L260 170L380 90L480 180L550 140L600 190" stroke="#C9A050" stroke-width="1" opacity="0.6"/>
+      <path d="M180 190L230 165L290 185L350 145L400 190" stroke="#7D7162" stroke-width="1"/>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Độc Giả & Đánh Giá - Feedback | Nhà Giả Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS CHUNG & CSS RIÊNG CỦA READERS / FEEDBACK -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/readers.css">
+</head>
+<body style="background-color: var(--bg-sand-light);">
+
+  <!-- Thanh điều hướng mini -->
+  <div style="background: #14110e; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center;">
+    <a href="index.html" style="color: #e4c57c; font-family: var(--font-heading-royal); font-weight: 700;">&larr; VỀ TRANG CHỦ</a>
+    <span style="color: #8e8372; font-size: 0.85rem;">FILE RIÊNG: feedback.html (CSS: css/readers.css)</span>
+  </div>
+
+  <!-- NỘI DUNG 04 — READERS -->
+  <section class="readers-section" id="readers" style="min-height: 85vh; display: flex; align-items: center;">
+    <div class="container" style="width: 100%;">
+      <div class="section-tag theme-light reveal-fade-up">
+        <span class="number">04</span>
+        <span class="line"></span>
+        <span>READERS</span>
+      </div>
+
+      <div class="readers-grid">
+        <!-- Đánh giá bên trái -->
+        <div class="reader-reviews-col">
+          <div class="reader-card reveal-fade-up delay-1">
+            <div class="reader-header">
+              <div class="reader-avatar">
+                <img 
+                  src="images/avatar-1.jpg" 
+                  alt="Minh Anh" 
+                  onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23c9a050\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M12 14c-6 0-8 3-8 5v1h16v-1c0-2-2-5-8-5z\'/></svg>'" 
+                />
+              </div>
+              <div class="reader-info">
+                <span class="reader-name">Minh Anh</span>
+                <span class="reader-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <p class="reader-quote">
+              "Một cuốn sách tuyệt vời! Đọc xong mình thấy như được tiếp thêm động lực để theo đuổi ước mơ của bản thân."
+            </p>
+          </div>
+
+          <div class="reader-card reveal-fade-up delay-2">
+            <div class="reader-header">
+              <div class="reader-avatar">
+                <img 
+                  src="images/avatar-2.jpg" 
+                  alt="Thu Phương" 
+                  onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23c9a050\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M12 14c-6 0-8 3-8 5v1h16v-1c0-2-2-5-8-5z\'/></svg>'" 
+                />
+              </div>
+              <div class="reader-info">
+                <span class="reader-name">Thu Phương</span>
+                <span class="reader-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <p class="reader-quote">
+              "Câu chuyện giản dị nhưng sâu sắc. Đọc Nhà Giả Kim, tôi học được cách lắng nghe trái tim mình."
+            </p>
+          </div>
+        </div>
+
+        <!-- Trung tâm: 4.8 / 5 & Thanh tỷ lệ sao -->
+        <div class="readers-center-summary reveal-zoom-in delay-2">
+          <blockquote class="readers-highlight-quote">
+            “Một cuốn sách nhỏ nhưng chứa đựng cả một thế giới lớn.”
+          </blockquote>
+
+          <div class="readers-score-wrapper">
+            <div class="readers-score-number">4.8 <span>/ 5</span></div>
+            <div class="readers-score-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+
+          <div class="rating-breakdown-table" id="ratingBreakdown">
+            <div class="rating-bar-row">
+              <span class="rating-star-label">5 sao</span>
+              <div class="rating-bar-track">
+                <div class="rating-bar-fill" data-percent="78"></div>
+              </div>
+              <span class="rating-percent-label">78%</span>
+            </div>
+
+            <div class="rating-bar-row">
+              <span class="rating-star-label">4 sao</span>
+              <div class="rating-bar-track">
+                <div class="rating-bar-fill" data-percent="15"></div>
+              </div>
+              <span class="rating-percent-label">15%</span>
+            </div>
+
+            <div class="rating-bar-row">
+              <span class="rating-star-label">3 sao</span>
+              <div class="rating-bar-track">
+                <div class="rating-bar-fill" data-percent="5"></div>
+              </div>
+              <span class="rating-percent-label">5%</span>
+            </div>
+
+            <div class="rating-bar-row">
+              <span class="rating-star-label">2 sao</span>
+              <div class="rating-bar-track">
+                <div class="rating-bar-fill" data-percent="1"></div>
+              </div>
+              <span class="rating-percent-label">1%</span>
+            </div>
+
+            <div class="rating-bar-row">
+              <span class="rating-star-label">1 sao</span>
+              <div class="rating-bar-track">
+                <div class="rating-bar-fill" data-percent="1"></div>
+              </div>
+              <span class="rating-percent-label">1%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Đánh giá bên phải -->
+        <div class="reader-reviews-col">
+          <div class="reader-card reveal-fade-up delay-1">
+            <div class="reader-header">
+              <div class="reader-avatar">
+                <img 
+                  src="images/avatar-3.jpg" 
+                  alt="Hoàng Nam" 
+                  onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23c9a050\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M12 14c-6 0-8 3-8 5v1h16v-1c0-2-2-5-8-5z\'/></svg>'" 
+                />
+              </div>
+              <div class="reader-info">
+                <span class="reader-name">Hoàng Nam</span>
+                <span class="reader-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <p class="reader-quote">
+              "Một hành trình đầy cảm hứng. Cuốn sách khiến mình suy nghĩ nhiều hơn về cuộc sống."
+            </p>
+          </div>
+
+          <div class="reader-card reveal-fade-up delay-2">
+            <div class="reader-header">
+              <div class="reader-avatar">
+                <img 
+                  src="images/avatar-4.jpg" 
+                  alt="Lan Anh" 
+                  onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23c9a050\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M12 14c-6 0-8 3-8 5v1h16v-1c0-2-2-5-8-5z\'/></svg>'" 
+                />
+              </div>
+              <div class="reader-info">
+                <span class="reader-name">Lan Anh</span>
+                <span class="reader-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <p class="reader-quote">
+              "Tuyệt vời! Một trong những cuốn sách hay nhất mà mình từng đọc. Rất đáng để trải nghiệm."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
